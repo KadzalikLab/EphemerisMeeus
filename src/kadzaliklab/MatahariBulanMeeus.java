@@ -1,4 +1,4 @@
-package kadzaliklab;
+5package kadzaliklab;
 
 public class MatahariBulanMeeus {
 
@@ -157,6 +157,7 @@ public class MatahariBulanMeeus {
         double lambdaM_r =Math.toRadians(lambdaM);
         double Delta_theta =TabelMatahari.bujurEkliptik(tau,koreksibujurB)[4];
         double theta_terkoreksi =TabelMatahari.bujurEkliptik(tau,koreksibujurB)[5];
+        if (theta_terkoreksi<0)theta_terkoreksi+=360;
         double jarakBumi_Matahari =TabelMatahari.jarakBumiMat(tau);
         double jarakBm_M=149598000*jarakBumi_Matahari;
         double lintangM =TabelMatahari.lintangEkliptikB(tau,lambdaM_r)[2];
@@ -217,7 +218,7 @@ public class MatahariBulanMeeus {
         System.out.printf(formatter,(int)jam,desimal_ke_derajat(bujurB_nampak)[1]+"\u00B0"+desimal_ke_derajat(bujurB_nampak)[2]+"\u2032"+desimal_ke_derajat(bujurB_nampak)[3]+"\u2033",desimal_ke_derajat(lintangB)[1]+"\u00B0"+desimal_ke_derajat(lintangB)[2]+"\u2032"+desimal_ke_derajat(lintangB)[3]+"\u2033",desimal_ke_derajat(alphaBulan)[1]+":"+desimal_ke_derajat(alphaBulan)[2]+":"+desimal_ke_derajat(alphaBulan)[3],desimal_ke_derajat(deltaBulan)[1]+"\u00B0"+desimal_ke_derajat(deltaBulan)[2]+"\u2032"+desimal_ke_derajat(deltaBulan)[3]+"\u2033",desimal_ke_derajat(sudutJariB)[1]+"\u00B0"+desimal_ke_derajat(sudutJariB)[2]+"\u2032"+desimal_ke_derajat(sudutJariB)[3]+"\u2033",desimal_ke_derajat(sudutParalaksB)[1]+"\u00B0"+desimal_ke_derajat(sudutParalaksB)[2]+"\u2032"+desimal_ke_derajat(sudutParalaksB)[3]+"\u2033",String.format("%.5f", iluminasiB));
 
         //Hilangkan tanda dibawah ini "/*", bila ingin menampilkan rincian perhitungan
-
+/*
 
         System.out.println("\n\nHari             = "+namahari(hari_ke));
          System.out.println("Pukul            = "+(int)jam+":"+(int)menit+":"+(int)detik);
