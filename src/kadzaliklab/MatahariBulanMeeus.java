@@ -213,7 +213,7 @@ public class MatahariBulanMeeus {
 
 
         System.out.println("\n\n"+"Data Bulan");
-        System.out.printf(formatter,"Jam","Ecliptic","Ecliptic","Right","Apparent","Semi","Horizontal","Iluminasi");
+        System.out.printf(formatter,"Jam","Apparent","Apparent","Right","Apparent","Semi","Horizontal","Iluminasi");
         System.out.printf(formatter,"Gmt","Longitude","Latitude","Ascension","Declination","Diameter","Parallax","Bulan");
         System.out.printf(formatter,(int)jam,desimal_ke_derajat(bujurB_nampak)[1]+"\u00B0"+desimal_ke_derajat(bujurB_nampak)[2]+"\u2032"+desimal_ke_derajat(bujurB_nampak)[3]+"\u2033",desimal_ke_derajat(lintangB)[1]+"\u00B0"+desimal_ke_derajat(lintangB)[2]+"\u2032"+desimal_ke_derajat(lintangB)[3]+"\u2033",desimal_ke_derajat(alphaBulan)[1]+":"+desimal_ke_derajat(alphaBulan)[2]+":"+desimal_ke_derajat(alphaBulan)[3],desimal_ke_derajat(deltaBulan)[1]+"\u00B0"+desimal_ke_derajat(deltaBulan)[2]+"\u2032"+desimal_ke_derajat(deltaBulan)[3]+"\u2033",desimal_ke_derajat(sudutJariB)[1]+"\u00B0"+desimal_ke_derajat(sudutJariB)[2]+"\u2032"+desimal_ke_derajat(sudutJariB)[3]+"\u2033",desimal_ke_derajat(sudutParalaksB)[1]+"\u00B0"+desimal_ke_derajat(sudutParalaksB)[2]+"\u2032"+desimal_ke_derajat(sudutParalaksB)[3]+"\u2033",String.format("%.5f", iluminasiB));
 
