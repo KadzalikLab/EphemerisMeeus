@@ -42,7 +42,7 @@ public class MatahariBulanMeeus {
         int B=0;
 
        //bila gregorian
-        if (tahun==1582&&bulan>=10&&tanggal>4||tahun>1582){
+        if (tahun==1582&&bulan>=10&&tanggal>4||tahun>1582||tahun==1582&&bulan>10){
             A=(tahun/100);
             B=2+(A/4)-A;
         }
