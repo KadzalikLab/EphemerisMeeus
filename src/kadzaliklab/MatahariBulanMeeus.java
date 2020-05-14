@@ -41,10 +41,11 @@ public class MatahariBulanMeeus {
         int A=0;
         int B=0;
 
-        //hanya ada saat hitung georgerian
-        if (tahun>1582){
+       //bila gregorian
+        if (tahun==1582&&bulan>=10&&tanggal>4||tahun>1582){
             A=(tahun/100);
-            B=2+(A/4)-A;}
+            B=2+(A/4)-A;
+        }
         double JD= 1720994.5+(int)(365.25*tahun)+(int)(30.60001*(bulan+1))+B+tanggal+((jam+menit/60+detik/3600)/24)-(timezone/24);
         double JD_UT=(1720994.5+(int)(365.25*tahun)+(int)(30.60001*(bulan+1))+B+tanggal+((jam+menit/60+detik/3600)/24)-(timezone/24));
 
